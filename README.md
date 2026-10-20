@@ -96,8 +96,6 @@ This project is released under the [MIT License](LICENSE).
 
 Shared styles, navigation and themes: [oz-coden.com-ui-web](https://github.com/oz-coden/oz-coden.com-ui-web).
 
-The initial implementation was adapted from the [text-analyzer tool](https://github.com/oz-coden/oz-coden.github.io/tree/dfc7c0a29396e2114d73e99dd17d494f7ab1c5ee/tools/text-analyzer) in oz-coden.github.io. This repository contains the source needed to run and modify the application independently.
-
 ---
 
 # 文字数カウント
@@ -195,5 +193,3 @@ This project is released under the [MIT License](LICENSE).
 ## クレジット
 
 共通のスタイル・ナビゲーション・テーマ：[oz-coden.com-ui-web](https://github.com/oz-coden/oz-coden.com-ui-web)。
-
-初期実装は、oz-coden.github.ioの[text-analyzerツール](https://github.com/oz-coden/oz-coden.github.io/tree/dfc7c0a29396e2114d73e99dd17d494f7ab1c5ee/tools/text-analyzer)を元にしています。このリポジトリには、単独でアプリを実行・変更するためのソースを含めています。
