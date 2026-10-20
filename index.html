@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="文字数・行数・段落数と、読了時間の目安をまとめて確認できます。">
+    <title>文字数カウント | oz-coden tools</title>
+    <script src="vendor/ui/ui.js"></script>
+    <link rel="stylesheet" href="vendor/ui/ui.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="ui-header" data-ui-header data-title="文字数カウント" data-source="https://github.com/oz-coden/text-analyzer-web">
+        <a class="ui-brand" href="https://tools.oz-coden.com/">oz-coden tools</a>
+    </header>
+    <main class="ui-main">
+        <div class="ui-heading">
+            <p class="ui-eyebrow">TEXT TOOLS</p>
+            <h1>文字数カウント</h1>
+            <p class="ui-description">文字数・行数・段落数と、読了時間の目安をまとめて確認できます。</p>
+        </div>
+        <section class="ui-panel">
+            <label for="text-input">解析するテキスト</label><textarea id="text-input" placeholder="ここにテキストを入力してください"></textarea>
+            <p class="ui-note">入力欄でEscキーを押すとクリアします。文字数はUnicodeコードポイント単位で、改行は含めません。</p>
+            <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value text-md" id="count-reading-time">0秒</div>
+                <div class="stat-label">読了予測 (500字/分)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="count-manuscript">0</div>
+                <div class="stat-label">原稿用紙 (400字/枚)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="count-chars-all">0</div>
+                <div class="stat-label">文字数 (空白含む)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="count-chars">0</div>
+                <div class="stat-label">文字数 (空白除く)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="count-lines">0</div>
+                <div class="stat-label">行数</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="count-paragraphs">0</div>
+                <div class="stat-label">段落数</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="count-sentences">0</div>
+                <div class="stat-label">文章数</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="count-punctuation">0</div>
+                <div class="stat-label">句読点の数</div>
+            </div></div>
+        </section>
+    </main>
+</body>
+</html>
