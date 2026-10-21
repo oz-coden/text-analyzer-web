@@ -30,8 +30,8 @@ function updateCounts() {
     elCharsAll.innerText = Array.from(textWithoutNewlines).length;
     elChars.innerText = Array.from(textStrictlyNoSpace).length;
     elLines.innerText = lines.length;
-    elParagraphs.innerText = text.split(/\n+/).filter(Boolean).length;
-    elSentences.innerText = text.split(/[。.]/).filter(Boolean).length;
+    elParagraphs.innerText = text.split(/\n+/).filter(part => part.trim()).length;
+    elSentences.innerText = text.split(/[。.]/).filter(part => part.trim()).length;
 
     const punctuationMatches = text.match(/[、。，．,.]/g);
     elPunctuation.innerText = punctuationMatches ? punctuationMatches.length : 0;

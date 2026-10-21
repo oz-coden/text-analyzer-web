@@ -37,7 +37,7 @@ The aim is to check the size and basic structure of a piece of writing in one pl
 
 ## Requirements, Dependencies
 
-- A current web browser with JavaScript enabled.
+- The latest stable version of a web browser with JavaScript enabled.
 
 The user interface is in Japanese. Shared UI assets are included in this repository. Python 3 is only needed for the example local server command below; an equivalent static HTTP server can also be used.
 
@@ -66,8 +66,8 @@ The counters use the following rules:
 
 - **Characters:** the total with whitespace excludes newline characters; the total without whitespace removes JavaScript `\s` whitespace, including spaces, tabs and newlines.
 - **Lines:** split the input at newlines, including empty lines and a final empty line after a trailing newline.
-- **Paragraphs:** count nonempty parts separated by one or more newlines.
-- **Sentences:** count nonempty parts separated by `。` or `.`; this is delimiter-based counting, not natural-language sentence analysis.
+- **Paragraphs:** count parts containing non-whitespace characters, separated by one or more newlines.
+- **Sentences:** count parts containing non-whitespace characters, separated by `。` or `.`; this is delimiter-based counting, not natural-language sentence analysis.
 - **Punctuation:** count `、`, `。`, `，`, `．`, `,` and `.`.
 - **Manuscript pages:** wrap each input line at 20 code points, count each empty line as one line, then round the total up to 20-line pages. Japanese typesetting rules are not applied.
 
@@ -135,7 +135,7 @@ Shared styles, navigation and themes: [oz-coden.com-ui-web](https://github.com/o
 
 ## 前提・依存
 
-- JavaScriptが有効な最新のWebブラウザ。
+- JavaScriptが有効な最新版（安定版）のWebブラウザ。
 
 画面の言語は日本語です。共通UIのファイルはこのリポジトリに同梱しています。Python 3は下記のローカルサーバーのコマンドを使う場合に必要で、同等の静的HTTPサーバーでも実行できます。
 
@@ -164,8 +164,8 @@ Shared styles, navigation and themes: [oz-coden.com-ui-web](https://github.com/o
 
 - **文字数：** 空白を含む値は改行を除きます。空白を除く値は、スペース・タブ・改行など、JavaScriptの`\s`に該当する文字を除きます。
 - **行数：** 改行で区切り、空行や末尾の改行の後の空行も数えます。
-- **段落数：** 1つ以上の改行で区切られた、空でない部分を数えます。
-- **文章数：** `。`または`.`で区切られた、空でない部分を数えます。区切り文字に基づく集計で、自然言語としての文の解析は行いません。
+- **段落数：** 1つ以上の改行で区切り、空白以外の文字を含む部分を数えます。
+- **文章数：** `。`または`.`で区切り、空白以外の文字を含む部分を数えます。区切り文字に基づく集計で、自然言語としての文の解析は行いません。
 - **句読点数：** `、`・`。`・`，`・`．`・`,`・`.`を数えます。
 - **原稿用紙：** 入力の各行を20コードポイントで折り返し、空行は1行として数え、合計を20行単位で切り上げます。禁則処理などの日本語の組版規則は適用しません。
 
